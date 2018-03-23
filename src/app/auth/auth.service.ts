@@ -5,7 +5,7 @@ import { AuthData } from './auth-data.model';
 import { Subject } from 'rxjs/Subject';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { TrainingService } from '../training/training/training.service';
+import { TrainingService } from '../training/training.service';
 import { UIService } from '../shared/ui.service';
 
 @Injectable()

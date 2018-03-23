@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -12,10 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { AuthService } from './auth/auth.service';
-import { TrainingService } from './training/training/training.service';
+import { TrainingService } from './training/training.service';
 import { UIService } from './shared/ui.service';
 import { AuthModule } from './auth/auth.module';
-import { TrainingModule } from './training/training/training.module';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { TrainingModule } from './training/training/training.module';
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AuthModule,
-    TrainingModule
+    AngularFirestoreModule
   ],
   providers: [
     AuthService,

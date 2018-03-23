@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { TrainingService } from '../training/training.service';
-import { Exercise } from '../training/exercise.model';
+import { TrainingService } from '../training.service';
+import { Exercise } from '../exercise.model';
 import { MatSelect } from '@angular/material';
 import { NgForm } from '@angular/forms';
 import { map } from 'rxjs/operators';
