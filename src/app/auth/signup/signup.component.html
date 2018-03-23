@@ -28,9 +28,9 @@
       <mat-error>Has to be at least 6 characters.</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input 
+      <input
         matInput
-        placeholder="Your birthdate" 
+        placeholder="Your birthdate"
         [matDatepicker]="picker"
         ngModel
         name="birthdate"
@@ -43,6 +43,7 @@
     <mat-checkbox ngModel name="agree" required color="primary">
       Agree to Terms and Conditions.
     </mat-checkbox>
-    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
+    <button *ngIf="!isLoading" type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
   </form>
 </section>
