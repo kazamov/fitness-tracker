@@ -22,7 +22,7 @@
 
   <ng-container matColumnDef="duration">
     <mat-header-cell *matHeaderCellDef mat-sort-header>Duration</mat-header-cell>
-    <mat-cell *matCellDef="let element">{{ element.duration | date }}</mat-cell>
+    <mat-cell *matCellDef="let element">{{ element.duration | number }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="state">
